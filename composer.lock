@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91cc5d90b6a6310e9f3efed9a0a23031",
+    "content-hash": "a783c6d0c711464194bb5611cfebc2ba",
     "packages": [
         {
             "name": "api-platform/core",
@@ -6869,16 +6869,16 @@
         },
         {
             "name": "zenstruck/foundry",
-            "version": "v1.33.0",
+            "version": "v1.38.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/foundry.git",
-                "reference": "3c46a2f2aa3ad8a1d74583a28a6be05e8c0a46ee"
+                "reference": "dfc44dc51059f97a645f1858bd4db5b00bb7ebb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/3c46a2f2aa3ad8a1d74583a28a6be05e8c0a46ee",
-                "reference": "3c46a2f2aa3ad8a1d74583a28a6be05e8c0a46ee",
+                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/dfc44dc51059f97a645f1858bd4db5b00bb7ebb3",
+                "reference": "dfc44dc51059f97a645f1858bd4db5b00bb7ebb3",
                 "shasum": ""
             },
             "require": {
@@ -6886,8 +6886,8 @@
                 "fakerphp/faker": "^1.10",
                 "php": ">=8.0",
                 "symfony/deprecation-contracts": "^2.2|^3.0",
-                "symfony/property-access": "^5.4|^6.0",
-                "symfony/string": "^5.4|^6.0",
+                "symfony/property-access": "^5.4|^6.0|^7.0",
+                "symfony/string": "^5.4|^6.0|^7.0",
                 "zenstruck/assert": "^1.0",
                 "zenstruck/callback": "^1.1"
             },
@@ -6895,33 +6895,37 @@
                 "doctrine/mongodb-odm": "2.5.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4",
-                "dama/doctrine-test-bundle": "^7.0",
+                "bamarni/composer-bin-plugin": "^1.8",
+                "dama/doctrine-test-bundle": "^7.0|^8.0",
                 "doctrine/doctrine-bundle": "^2.5",
                 "doctrine/doctrine-migrations-bundle": "^2.2|^3.0",
-                "doctrine/mongodb-odm": "^2.0",
-                "doctrine/mongodb-odm-bundle": "^4.4.0",
-                "doctrine/orm": "^2.9",
-                "matthiasnoback/symfony-dependency-injection-test": "^4.1",
-                "symfony/framework-bundle": "^5.4|^6.0",
-                "symfony/maker-bundle": "^1.30",
-                "symfony/phpunit-bridge": "^5.4|^6.0",
+                "doctrine/mongodb-odm": "^2.4",
+                "doctrine/mongodb-odm-bundle": "^4.4.0|^5.0",
+                "doctrine/orm": "^2.11|^3.0",
+                "matthiasnoback/symfony-dependency-injection-test": "^4.1|^5.0",
+                "phpunit/phpunit": "^9.5.0",
+                "symfony/dotenv": "^5.4|^6.0|^7.0",
+                "symfony/framework-bundle": "^5.4|^6.0|^7.0",
+                "symfony/maker-bundle": "^1.49",
+                "symfony/phpunit-bridge": "^5.4|^6.0|^7.0",
                 "symfony/translation-contracts": "^2.5|^3.0"
             },
             "type": "library",
             "extra": {
                 "bamarni-bin": {
-                    "target-directory": "bin/tools",
                     "bin-links": true,
-                    "forward-command": false
+                    "forward-command": false,
+                    "target-directory": "bin/tools"
                 }
             },
             "autoload": {
                 "files": [
-                    "src/functions.php"
+                    "src/functions.php",
+                    "src/Persistence/functions.php"
                 ],
                 "psr-4": {
-                    "Zenstruck\\Foundry\\": "src/"
+                    "Zenstruck\\Foundry\\": "src/",
+                    "Zenstruck\\Foundry\\Utils\\Rector\\": "utils/rector/src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6938,6 +6942,7 @@
             "homepage": "https://github.com/zenstruck/foundry",
             "keywords": [
                 "Fixture",
+                "dev",
                 "doctrine",
                 "factory",
                 "faker",
@@ -6946,7 +6951,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/foundry/issues",
-                "source": "https://github.com/zenstruck/foundry/tree/v1.33.0"
+                "source": "https://github.com/zenstruck/foundry/tree/v1.38.4"
             },
             "funding": [
                 {
@@ -6954,12 +6959,12 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-23T16:21:57+00:00"
+            "time": "2025-01-03T09:04:39+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -6967,6 +6972,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
